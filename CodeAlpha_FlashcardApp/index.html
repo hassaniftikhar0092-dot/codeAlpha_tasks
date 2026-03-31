@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProFlash | Advanced Study Tool</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>Pro<span>Flash</span></h1>
+        <button id="open-settings" class="btn-secondary">
+          <i data-lucide="layers"></i> Manage
+        </button>
+      </header>
+
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <div class="flashcard" id="flashcard">
+        <div class="card-inner">
+          <div class="card-front">
+            <span class="label">Question</span>
+            <p id="question-text">Loading...</p>
+          </div>
+          <div class="card-back">
+            <span class="label">Answer</span>
+            <p id="answer-text">Loading...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev-btn" class="nav-btn">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <span id="card-index">0 / 0</span>
+        <button id="next-btn" class="nav-btn">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+
+      <button id="flip-btn" class="btn-primary">
+        <i data-lucide="refresh-cw"></i> Show Answer
+      </button>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Deck Manager</h3>
+          <button id="close-modal" class="close-x">&times;</button>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="new-q" placeholder="Question..." />
+          <input type="text" id="new-a" placeholder="Answer..." />
+          <button id="add-card-btn" class="btn-primary">Add Card</button>
+        </div>
+
+        <div id="card-list" class="card-list"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
